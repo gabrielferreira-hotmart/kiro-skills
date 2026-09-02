@@ -1,0 +1,90 @@
+rules:
+  - capability: shell
+    match:
+      - mkdir -p
+        /Users/gabriellopesferreira/sparkle-ios/.kiro/specs/upayments-advanced-commerce-api
+      - which brew 2>/dev/null || echo "NOT_FOUND"
+      - brew *
+      - mkdir -p
+        /Users/gabriellopesferreira/sparkle-ios/ios/Features/uPayment/aca-server
+      - node *
+      - ls *
+      - "*"
+    effect: allow
+  - capability: web_fetch
+    effect: allow
+  - capability: web_search
+    effect: allow
+  - capability: mcp
+    match:
+      - github/list_pull_requests
+      - atlassian/getJiraIssue
+      - github/get_file_contents
+      - github/list_prs
+      - atlassian/createJiraIssue
+      - atlassian/getJiraProjectIssueTypesMetadata
+      - github/get_repo_contents
+      - atlassian/editJiraIssue
+      - atlassian/getJiraIssueTypeMetaWithFields
+      - astrolens/search
+      - mcp-datahub/search_datahub_docs
+      - astrolens/get_entities
+      - github/get_pr_details
+      - github/list_pr_files
+      - github/list_commits
+      - github/list_pr_reviews
+      - github/list_issue_comments
+      - git/git_set_working_dir
+      - git/git_status
+      - git/git_add
+      - git/git_commit
+      - github/create_pull_request
+      - github/edit_pull_request
+      - github/list_workflow_runs
+      - github/search_code
+      - github/search_repos
+      - github/get_commit_details
+      - github/list_workflows
+      - github/get_workflow_run_details
+      - atlassian/searchJiraIssuesUsingJql
+      - fetch/fetch
+      - figma/get_figma_data
+      - atlassian/getAccessibleAtlassianResources
+      - atlassian/lookupJiraAccountId
+      - atlassian/getTransitionsForJiraIssue
+      - atlassian/transitionJiraIssue
+      - atlassian/getConfluencePage
+      - git/git_checkout
+      - git/git_fetch
+      - git/git_diff
+      - git/git_stash
+      - git/git_log
+      - git/git_reset
+      - github/release_management
+      - github/search_issues
+      - git/git_push
+      - git/git_branch
+      - firebase/firebase_login
+      - firebase/firebase_update_environment
+      - github/list_issues
+      - firebase/crashlytics_get_issue
+      - firebase/firebase_get_environment
+      - firebase/firebase_list_apps
+      - firebase/crashlytics_list_events
+      - firebase/crashlytics_get_report
+      - xcodebuild/list_sims
+      - firebase/crashlytics_batch_get_events
+      - git/git_pull
+      - git/git_rebase
+      - git/git_remote
+      - github/set_default_repo
+      - git/git_show
+    effect: allow
+  - capability: fs_write
+    effect: allow
+  - capability: fs_read
+    effect: allow
+  - capability: skill
+    effect: allow
+  - capability: subagent
+    effect: allow
